@@ -1,15 +1,27 @@
 @charset "UTF-8";
 
-// Mixins
+
+
+// Core variables and mixins
+@import "components/variables";
 @import "components/mixins";
 
 
-// Variables;
-@import "components/variables";
+// Reset and dependencies
+@import "components/normalize";
+//@import "bootstrap/print";
+//@import "bootstrap/glyphicons";
 
-// Reset
-//@import "components/normalize";
 
-//grid
+
+
+// Core CSS
+@import "components/global";
+@import "components/typography";
+//@import "bootstrap/code";
 @import "components/grid/grid";
+
+//@import "bootstrap/tables";
+//@import "bootstrap/forms";
+//@import "bootstrap/buttons";
 
