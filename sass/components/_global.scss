@@ -1,8 +1,6 @@
 
 // global
 // --------------------------------------------------
-
-
 * {
   @include box-sizing(border-box);
 }
@@ -38,7 +36,6 @@ textarea {
 
 
 // Links
-
 a {
   color: $link-color;
   text-decoration: none;
@@ -56,21 +53,17 @@ a {
 
 
 // Figures
-//
 // We reset this here because previously Normalize had no `figure` margins. This
 // ensures we don't break anyone's use of the element.
-
 figure {
   margin: 0;
 }
 
 
 // Images
-
 img {
   vertical-align: middle;
 }
-
 // Responsive images (ensure images don't scale beyond their parents)
 .img-responsive {
   @include img-responsive;
@@ -82,7 +75,6 @@ img {
 }
 
 // Image thumbnails
-//
 // Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
 .img-thumbnail {
   padding: $thumbnail-padding;
@@ -103,7 +95,6 @@ img {
 
 
 // Horizontal rules
-
 hr {
   margin-top:    $line-height-computed;
   margin-bottom: $line-height-computed;
@@ -130,7 +121,6 @@ hr {
 // Use in conjunction with .sr-only to only display content when it's focused.
 // Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
 // Credit: HTML5 Boilerplate
-
 .sr-only-focusable {
   &:active,
   &:focus {
@@ -153,3 +143,5 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+
+

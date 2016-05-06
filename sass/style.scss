@@ -18,10 +18,18 @@
 // Core CSS
 @import "components/global";
 @import "components/typography";
-//@import "bootstrap/code";
+@import "components/code";
 @import "components/grid/grid";
+@import "components/tables";
+@import "components/forms/forms";
+@import "components/buttons";
 
-//@import "bootstrap/tables";
-//@import "bootstrap/forms";
-//@import "bootstrap/buttons";
+// Components
+@import "components/thumbnails";
+@import "components/_alerts.scss";
+@import "components/_helper.scss";
 
+
+// Utility classes
+//@import "components/utilities";
+@import "components/responsive-utilities";
