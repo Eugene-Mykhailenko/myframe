@@ -9,8 +9,7 @@
 
 // Reset and dependencies
 @import "components/normalize";
-//@import "bootstrap/print";
-//@import "bootstrap/glyphicons";
+@import "components/icons/theme-icons";
 
 
 
@@ -28,6 +27,7 @@
 @import "components/thumbnails";
 @import "components/_alerts.scss";
 @import "components/_helper.scss";
+@import "components/_dropdown.scss";
 
 
 // Utility classes

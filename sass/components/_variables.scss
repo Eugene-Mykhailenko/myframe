@@ -10,11 +10,11 @@
   $gray-light:             lighten($gray-base, 46.7%) !default; // #777
   $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-  $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-  $brand-success:         #5cb85c !default;
-  $brand-info:            #5bc0de !default;
-  $brand-warning:         #f0ad4e !default;
-  $brand-danger:          #d9534f !default;
+  $brand-primary:         #428bca !default;
+  $brand-success:         rgba(76, 175, 80, 0.70) !default;
+  $brand-info:            rgba(91, 192, 222, 0.70) !default;
+  $brand-warning:         rgba(255, 235, 59, .70) !default;
+  $brand-danger:          rgba(244, 67, 54, .70) !default;
 
   $whiteColor: #fff;
   $blackColor: #000;
@@ -62,6 +62,15 @@
   $headings-font-weight:    500 !default;
   $headings-line-height:    1.1 !default;
   $headings-color:          inherit !default;
+
+
+//== Icons
+//
+// bootstrap icons
+$bootstrap-sass-asset-helper: false !default;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../icons/bootstrap-icons/") !default;
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 
 
 
@@ -123,15 +132,7 @@ $component-active-bg:       $brand-primary !default;
   $table-border-color:            #ddd !default;
 
 
-  //== Buttons
-  //
-  //## For each of Bootstrap's buttons, define text, background and border color.
 
-  $btn-font-weight:                normal !default;
-
-  $btn-default-color:              #333 !default;
-  $btn-default-bg:                 #fff !default;
-  $btn-default-border:             #ccc !default;
 
   $btn-primary-color:              #fff !default;
   $btn-primary-bg:                 $brand-primary !default;
@@ -153,16 +154,97 @@ $component-active-bg:       $brand-primary !default;
   $btn-danger-bg:                  $brand-danger !default;
   $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
-  $btn-link-disabled-color:        $gray-light !default;
-
   // Allows for customizing button radius independently from global border radius
-  $btn-border-radius-base:         $border-radius-base !default;
-  $btn-border-radius-large:        $border-radius-large !default;
-  $btn-border-radius-small:        $border-radius-small !default;
+  //$btn-border-radius-base:         $border-radius-base !default;
+  //$btn-border-radius-large:        $border-radius-large !default;
+  //$btn-border-radius-small:        $border-radius-small !default;
 
 
-  /* 10. Forms
-  ========================================================================== */
+    /* 3. Buttons
+       ========================================================================== */
+
+
+    // Shared styles
+    $btn-height: 35px !default;
+    $btn-padding: 0 12px !default;
+    $btn-font-size: 1em !default;
+    $btn-font-weight: normal !default;
+    $btn-border: none !default;
+    $btn-border-radius: 0px !default;
+
+
+    // Disabled styles
+    $btn-disabled-background: #DFDFDF !default;
+    $btn-disabled-color: #9F9F9F !default;
+
+
+
+    $btn-icon-font-size: 1em;
+
+    // Buttons sizes
+    //--------------
+    // Extra Small buttons
+    $btn-xs-button-height: 22px;
+    $btn-xs-padding-horizontal: 1em;
+    $btn-xs-font-size: 12px;
+    $btn-xs-line-height: $btn-xs-button-height;
+    $btn-xs-border-radius: $btn-border-radius;
+    // Small buttons
+    $btn-sm-button-height: 30px;
+    $btn-sm-padding-horizontal: 1em;
+    $btn-sm-font-size: 12px;
+    $btn-sm-line-height: $btn-sm-button-height;
+    $btn-sm-border-radius: $btn-border-radius;
+    // Large buttons
+    $btn-lg-button-height: 40px;
+    $btn-lg-padding-horizontal: 1em;
+    $btn-lg-font-size: 18px;
+    $btn-lg-line-height: $btn-lg-button-height;
+    $btn-lg-border-radius: $btn-border-radius;
+
+
+    // Flat buttons
+    //-----------------
+    $btn-flat-color: #343434 !default;
+    $btn-flat-disabled-color: lighten(#999, 10%) !default;
+
+    //Floating buttons
+    //-----------------
+    $btn-floating-background: $brand-primary !default;
+    $btn-floating-background-hover: $btn-floating-background !default;
+    $btn-floating-color: #fff !default;
+    $btn-floating-size: 35px !default;
+    $btn-floating-radius: 50% !default;
+
+    // Floating buttons sizes
+    //-----------------
+    // Extra Small Floating Buttons
+    $btn-floating-xs-size: 22px;
+    $btn-floating-xs-font-size: 12px;
+
+    // Small Floating Buttons
+    $btn-floating-sm-size: 30px;
+    $btn-floating-sm-font-size: 12px;
+
+    // Large Floating Buttons
+    $btn-floating-lg-size: 40px;
+    $btn-floating-lg-font-size: 18px;
+
+
+
+
+    //Btn colors
+    //-----------------
+    //btn-default
+    $btn-default-color:              #333 !default;
+    $btn-default-bg:                 #fff !default;
+    $btn-default-border:             #ccc !default;
+
+
+
+
+/* 10. Forms
+========================================================================== */
 
   // Text Inputs + Textarea
   $input-height: 40px !default;
@@ -176,7 +258,7 @@ $component-active-bg:       $brand-primary !default;
   $input-margin: 0 0 15px 0 !default;
   $input-padding: 0 !default;
   $input-transition: all .3s !default;
-  $label-font-size: .8em !default;
+  $label-font-size: 1em !default;
   $input-disabled-color: rgba(0,0,0, .26) !default;
   $input-disabled-solid-color: #BDBDBD !default;
   $input-disabled-border: 1px dotted $input-disabled-color !default;
@@ -218,7 +300,6 @@ $component-active-bg:       $brand-primary !default;
 
   /* 8. Dropdown
      ========================================================================== */
-
   $dropdown-bg-color: #fff !default;
   $dropdown-hover-bg-color: #eee !default;
   $dropdown-color: $brand-primary !default;

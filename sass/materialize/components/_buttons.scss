@@ -44,6 +44,12 @@
   i {
     font-size: $button-font-size;
     line-height: inherit;
+    &.right {
+      margin-left: 15px;
+    }
+    &.left {
+      margin-right: 15px;
+    }
   }
 }
 

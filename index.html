@@ -9,10 +9,12 @@
         <title>my framework</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+        <link href="./images/" rel="shortcut icon" type="image/x-icon" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700%7Csubset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
         <link href="./css/style.min.css" rel="stylesheet" type="text/css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -417,95 +419,238 @@
                         </form>
 
                         <h3>Prefilling Text Inputs</h3>
-                        <div class="input-field col-xs-6">
-                            <input value="Alvin" id="first_name2" type="text" class="validate">
-                            <label class="active" for="first_name2">First Name</label>
+                        <div class="row">
+                            <div class="input-field col-xs-6">
+                                <input value="Alvin" id="first_name2" type="text" class="validate">
+                                <label class="active" for="first_name2">First Name</label>
+                            </div>
                         </div>
 
                         <h3>Icon Prefixes</h3>
-                        <form class="col-sx-12">
-                            <div class="row">
-                                <div class="input-field col-sx-6">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" class="validate">
-                                    <label for="icon_prefix">First Name</label>
-                                </div>
-                                <div class="input-field col-sx-6">
-                                    <i class="material-icons prefix">phone</i>
-                                    <input id="icon_telephone" type="tel" class="validate">
-                                    <label for="icon_telephone">Telephone</label>
-                                </div>
-                            </div>
-                        </form>
-
-                        <h3>Custom Error or Success Messages</h3>
-                        <form class="col-sx-12">
-                            <div class="row">
-                                <div class="input-field col-sx-12">
-                                    <input id="email" type="email" class="validate">
-                                    <label for="email" data-error="wrong" data-success="right">Email</label>
-                                </div>
-                            </div>
-                        </form>
-
                         <div class="row">
-                            <form class="col s12">
+                            <form class="col-sx-12">
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                        <label for="textarea1">Textarea</label>
+                                    <div class="input-field col-sx-6">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="icon_prefix" type="text" class="validate">
+                                        <label for="icon_prefix">First Name</label>
+                                    </div>
+                                    <div class="input-field col-sx-6">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="icon_telephone" type="tel" class="validate">
+                                        <label for="icon_telephone">Telephone</label>
                                     </div>
                                 </div>
                             </form>
                         </div>
+
+                        <h3>Custom Error or Success Messages</h3>
+                        <div class="row">
+                            <form class="col-sx-12">
+                                <div class="row">
+                                    <div class="input-field col-sx-12">
+                                        <input id="email3" type="email" class="validate">
+                                        <label for="email3" data-error="wrong" data-success="right">Email</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <h3>Textarea</h3>
+                        <div class="row">
+                            <form class="col-sx-12">
+                                <div class="row">
+                                    <div class="input-field col-sx-12">
+                                        <textarea id="textarea2" class="materialize-textarea"></textarea>
+                                        <label for="textarea2">Textarea</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <h3>Icon Prefixes</h3>
+                        <div class="row">
+                            <form class="col-sx-12">
+                                <div class="row">
+                                    <div class="input-field col-sx-6">
+                                        <!--<i class="material-icons prefix">mode_edit</i>-->
+                                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                        <label for="icon_prefix2">First Name</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <h3>Select</h3>
+                        <div class="row">
+                            <div class="input-field col-sx-12">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Select</label>
+                            </div>
+
+                            <div class="input-field col-sx-12">
+                                <select multiple>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Multiple Select</label>
+                            </div>
+
+                            <div class="input-field col-sx-12">
+                                <select multiple>
+                                    <optgroup label="team 1">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="team 2">
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </optgroup>
+                                </select>
+                                <label>Optgroups</label>
+                            </div>
+
+                            <div class="input-field col-sx-12 col-md-6">
+                                <select class="icons">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" data-icon="images/sample-1.jpg" class="circle">example 1</option>
+                                    <option value="" data-icon="images/office.jpg" class="circle">example 2</option>
+                                    <option value="" data-icon="images/yuna.jpg" class="circle">example 1</option>
+                                </select>
+                                <label>Images in select</label>
+                            </div>
+                            <div class="input-field col-sx-12 col-md-6">
+                                <select class="icons">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+                                    <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+                                    <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                                </select>
+                                <label>Images in select</label>
+                            </div>
+                        </div>
+
+                        <label>Browser Select</label>
+                        <select class="browser-default">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
                     </div>
 
                     <div class="row">
                         <h2>buttons</h2>
-                        <a class="btn btn-default" href="#" role="button">Link</a>
-                        <button class="btn btn-default" type="submit">Button</button>
-                        <input class="btn btn-default" type="button" value="Input">
-                        <input class="btn btn-default" type="submit" value="Submit">
 
-                        <h3>Buttons Options</h3>
-                        <!-- Standard button -->
-                        <button type="button" class="btn btn-default">Default</button>
 
-                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-primary">Primary</button>
+                        <a class="waves-effect waves-light btn">button</a>
+                        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                        <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
 
-                        <!-- Indicates a successful or positive action -->
-                        <button type="button" class="btn btn-success">Success</button>
+                        <br><br>
+                        <a class="btn-floating btn-lg waves-effect waves-light red"><i class="material-icons">add</i></a>
+                        <br><br>
+                        <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+                            <a class="btn-floating btn-lg red">
+                                <i class="large material-icons">mode_edit</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                            </ul>
+                        </div>
+                        <br><br>
+                        <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+                            <a class="btn-floating btn-lg red">
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <h3>Flat</h3>
+                        <a class="waves-effect waves-teal btn-flat">Button</a>
+                        <br>
+                        <h3>Submit Button</h3>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
 
-                        <!-- Contextual button for informational alert messages -->
-                        <button type="button" class="btn btn-info">Info</button>
-
-                        <!-- Indicates caution should be taken with this action -->
-                        <button type="button" class="btn btn-warning">Warning</button>
-
-                        <!-- Indicates a dangerous or potentially negative action -->
-                        <button type="button" class="btn btn-danger">Danger</button>
-
-                        <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-                        <button type="button" class="btn btn-link">Link</button>
+                        <br>
 
                         <h3>Buttons Size</h3>
-                        <p>
-                            <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                            <button type="button" class="btn btn-default btn-lg">Large button</button>
-                        </p>
-                        <p>
-                            <button type="button" class="btn btn-primary">Default button</button>
-                            <button type="button" class="btn btn-default">Default button</button>
-                        </p>
-                        <p>
-                            <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                            <button type="button" class="btn btn-default btn-sm">Small button</button>
-                        </p>
-                        <p>
-                            <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-                            <button type="button" class="btn btn-default btn-xs">Extra small button</button>
-                        </p>
+
+                        <a class="waves-effect waves-light btn btn-xs"><i class="material-icons left">cloud</i>button</a>
+                        <a class="waves-effect waves-light btn btn-sm"><i class="material-icons left">cloud</i>button</a>
+                        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                        <a class="waves-effect waves-light btn btn-lg"><i class="material-icons left">cloud</i>button</a>
+
+                        <br>
+
+                        <h3>Disabled</h3>
+                        <a class="btn btn-lg disabled">Button</a>
+                        <a class="btn disabled">Button</a>
+                        <a class="btn btn-flat disabled">Button</a>
+                        <a class="btn-floating disabled"><i class="material-icons">add</i></a>
+
+
+
+
+                        <h3>Buttons Options</h3>
+
+
+                        <a href="#!" class="btn waves-effect">Send</a>
+                        <a href="#!" class="btn waves-effect waves-light">Send</a>
+                        <a href="#!" class="btn waves-effect waves-red">Send</a>
+                        <a href="#!" class="btn waves-effect waves-yellow">Send</a>
+                        <a href="#!" class="btn waves-effect waves-orange">Send</a>
+                        <a href="#!" class="btn waves-effect waves-purple">Send</a>
+                        <a href="#!" class="btn waves-effect waves-green">Send</a>
+                        <a href="#!" class="btn waves-effect waves-teal">Send</a>
+                        <br><br>
+                        <a href="#!" class="btn-floating waves-effect">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-light">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-red">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-yellow">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-orange">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-purple">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-green">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+                        <a href="#!" class="btn-floating waves-effect waves-teal">
+                            <i class="theme-icon fa fa-plus"></i>
+                        </a>
+
+
+
+
+
+                        <br><br><br><br>
 
                         <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
                         <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
@@ -685,5 +830,6 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="./js/bin/materialize.js"></script>
         <!--<script type="text/javascript" src="./js/forms.js"></script> -->
+        <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
