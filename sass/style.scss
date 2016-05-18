@@ -7,11 +7,8 @@
 @import "components/mixins";
 
 
-// Reset and dependencies
+// Reset
 @import "components/normalize";
-@import "components/icons/theme-icons";
-
-
 
 
 // Core CSS
@@ -20,16 +17,32 @@
 @import "components/code";
 @import "components/grid/grid";
 @import "components/tables";
-@import "components/forms/forms";
-@import "components/buttons";
+@import "components/_helper.scss";
+
 
 // Components
-@import "components/thumbnails";
-@import "components/_alerts.scss";
-@import "components/_helper.scss";
-@import "components/_dropdown.scss";
+@import "components/buttons";
+@import "components/dropdown.scss";
+@import "components/cards";
+@import "components/forms/forms";
+@import "components/icons/theme-icons";
+@import "components/alerts";
+@import "components/labels";
+@import "components/badge";
+@import "components/pagination";
+@import "components/breadcrumb";
+@import "components/progress-bar";
+@import "components/preloader";
+@import "components/collapsible";
+@import "components/toast";
+@import "components/tooltip";
+@import "components/modal";
+@import "components/tabs";
+@import "components/materialbox.scss";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
 
 
-// Utility classes
-//@import "components/utilities";
+// Responsive Utility classes
 @import "components/responsive-utilities";

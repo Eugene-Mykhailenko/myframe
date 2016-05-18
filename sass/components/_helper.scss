@@ -1,0 +1,280 @@
+﻿/*------------------------------------------------------------------
+    helper classes
+-------------------------------------------------------------------*/
+
+// Typography helper clases
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+
+
+//font-weight
+.text-light {
+    font-weight: 300 !important;
+}
+.text-bold {
+    font-weight: bold !important;
+}
+.text-white {
+    color: $whiteColor !important;
+}
+
+// Contextual colors
+.text-muted {color: $text-muted;}
+@include text-emphasis-variant('.text-primary', $color-primary);
+@include text-emphasis-variant('.text-success', $state-success-text);
+@include text-emphasis-variant('.text-info',    $state-info-text);
+@include text-emphasis-variant('.text-warning', $state-warning-text);
+@include text-emphasis-variant('.text-danger',  $state-danger-text);
+
+
+//section-text-white
+.section-text-white {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+        color: $whiteColor;
+    }
+}
+
+
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+    // Given the contrast here, this is the only class to have its color inverted
+    // automatically.
+    color: $whiteColor;
+}
+@include bg-variant('.bg-primary', $color-primary);
+@include bg-variant('.bg-success', $state-success-bg);
+@include bg-variant('.bg-info', $state-info-bg);
+@include bg-variant('.bg-warning', $state-warning-bg);
+@include bg-variant('.bg-danger', $state-danger-bg);
+
+
+// theme-box-shadow
+//==================
+.theme-box-shadow {
+    box-shadow: 0 2px 30px 0 rgba($blackColor,0.5);
+}
+
+.z-depth-0      {box-shadow: none !important;}
+.z-depth-1      {box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
+.z-depth-1-half {box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
+.z-depth-2      {box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.z-depth-3      {box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);}
+.z-depth-4      {box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);}
+.z-depth-5      {box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);}
+
+
+
+
+//center-block
+//===============
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+// margin
+//============
+.nomargin        {margin: 0 !important;}
+.nomargin-right  {margin-right: 0 !important;}
+.nomargin-left   {margin-left: 0 !important;}
+.nomargin-bottom {margin-bottom: 0 !important;}
+.nomargin-top    {margin-top: 0 !important;}
+// margin-top
+@for $i from 0 through 20 {
+    .margin-top-#{$i * 5} {
+        margin-top: $i*5+px !important;
+    }
+}
+// margin-bottom
+@for $i from 0 through 20 {
+    .margin-bottom-#{$i * 5} {
+        margin-bottom: $i*5+px !important;
+    }
+}
+// margin-left
+@for $i from 0 through 20 {
+    .margin-left-#{$i * 5} {
+        margin-left: $i*5+px !important;
+    }
+}
+// margin-right
+@for $i from 0 through 20 {
+    .margin-right-#{$i * 5} {
+        margin-right: $i*5+px !important;
+    }
+}
+
+
+// padding
+//============
+.nopadding       { padding:0 !important;}
+.nopadding-right { padding-right: 0 !important;}
+.nopadding-left  { padding-left: 0 !important;}
+.nopadding-top   { padding-top: 0 !important;}
+.nopadding-bottom{ padding-bottom: 0 !important;}
+
+// padding-top
+@for $i from 0 through 20 {
+    .padding-top-#{$i * 5} {
+        padding-top: $i*5+px !important;
+    }
+}
+// padding-bottom
+@for $i from 0 through 20 {
+    .padding-bottom-#{$i * 5} {
+        padding-bottom: $i*5+px !important;
+    }
+}
+// padding-left
+@for $i from 0 through 20 {
+    .padding-left-#{$i * 5} {
+        padding-left: $i*5+px !important;
+    }
+}
+// padding-right
+@for $i from 0 through 20 {
+    .padding-right-#{$i * 5} {
+        padding-right: $i*5+px !important;
+    }
+}
+@for $i from 0 through 10 {
+    .padding-left-xs-#{$i * 5} {
+        padding-left: $i*5+px !important;
+    }
+}
+@media (min-width: $screen-sm) {
+    @for $i from 0 through 10 {
+        .padding-left-sm-#{$i * 5} {
+            padding-left: $i*5+px !important;
+        }
+    }
+}
+@media (min-width: $screen-md) {
+    @for $i from 0 through 10 {
+        .padding-left-md-#{$i * 5} {
+            padding-left: $i*5+px !important;
+        }
+    }
+}
+@media (min-width: $screen-lg) {
+    @for $i from 0 through 10 {
+        .padding-left-lg-#{$i * 5} {
+            padding-left: $i*5+px !important;
+        }
+    }
+}
+
+@for $i from 0 through 10 {
+    .padding-right-xs-#{$i * 5} {
+        padding-right: $i*5+px !important;
+    }
+}
+@media (min-width: $screen-sm) {
+    @for $i from 0 through 10 {
+        .padding-right-sm-#{$i * 5} {
+            padding-right: $i*5+px !important;
+        }
+    }
+}
+@media (min-width: $screen-md) {
+    @for $i from 0 through 10 {
+        .padding-right-md-#{$i * 5} {
+            padding-right: $i*5+px !important;
+        }
+    }
+}
+@media (min-width: $screen-lg) {
+    @for $i from 0 through 10 {
+        .padding-right-lg-#{$i * 5} {
+            padding-right: $i*5+px !important;
+        }
+    }
+}
+
+
+//pull-left and pull-right
+//==========================
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+
+
+
+.pull-left-xs {
+    float: left !important;
+}
+@media (min-width: $screen-sm) {
+    .pull-left-sm {
+        float: left !important;
+    }
+}
+@media (min-width: $screen-md) {
+    .pull-left-md {
+        float: left !important;
+    }
+}
+@media (min-width: $screen-lg) {
+    .pull-left-lg {
+        float: left !important;
+    }
+}
+.pull-right-xs {
+    float: right !important;
+}
+@media (min-width: $screen-sm) {
+    .pull-right-sm {
+        float: right !important;
+    }
+}
+@media (min-width: $screen-md) {
+    .pull-right-md {
+        float: right !important;
+    }
+}
+@media (min-width: 1999px) {
+    .pull-right-lg {
+        float: right !important;
+    }
+}
+
+
+//Showing and hiding content
+//===========================
+.show {
+    display: block !important;
+}
+.hidden {
+    display: none !important;
+}
+.invisible {
+    visibility: hidden;
+}
