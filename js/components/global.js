@@ -1,3 +1,15 @@
+// Check for jQuery.
+if (typeof(jQuery) === 'undefined') {
+    var jQuery;
+    // Check if require is a defined function.
+    if (typeof(require) === 'function') {
+        jQuery = $ = require('jquery');
+        // Else use the dollar sign alias.
+    } else {
+        jQuery = $;
+    }
+}
+
 // Required for Meteor package, the use of window prevents export by Meteor
 (function(window){
   if(window.Package){
